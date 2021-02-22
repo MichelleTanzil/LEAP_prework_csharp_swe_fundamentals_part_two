@@ -1,0 +1,12 @@
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\bin\Debug\netcoreapp3.1\swe_fundamentals_part_two.exe
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\bin\Debug\netcoreapp3.1\swe_fundamentals_part_two.deps.json
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\bin\Debug\netcoreapp3.1\swe_fundamentals_part_two.runtimeconfig.json
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\bin\Debug\netcoreapp3.1\swe_fundamentals_part_two.runtimeconfig.dev.json
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\bin\Debug\netcoreapp3.1\swe_fundamentals_part_two.dll
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\bin\Debug\netcoreapp3.1\swe_fundamentals_part_two.pdb
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.AssemblyInfoInputs.cache
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.AssemblyInfo.cs
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.csproj.CoreCompileInputs.cache
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.dll
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.pdb
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.genruntimeconfig.cache
