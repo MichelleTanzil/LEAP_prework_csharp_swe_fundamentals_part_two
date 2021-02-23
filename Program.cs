@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace swe_fundamentals_part_2
 {
@@ -10,9 +11,74 @@ namespace swe_fundamentals_part_2
         Happy,
         Sad
     }
+
     class Program
     {
-        static void Main(string[] args)
+        public static void PrintMessageString(string msg)
+        {
+            if (string.IsNullOrEmpty(msg))
+                return;
+            Console.WriteLine(msg);
+        }
+        public static string JoinMessages(string str1, string str2, string str3)
+        {
+            return String.Concat(str1, str2, str3);
+        }
+
+        public static void UpdateArray(int[] arrayToBeUpdated, int idx, int val)
+        {
+            if (idx >= 0 && idx < arrayToBeUpdated.Length - 1)
+            {
+                arrayToBeUpdated[idx] = val;
+                Console.WriteLine($"arrayToBeUpdated's index #{idx} was changed to {arrayToBeUpdated[idx]}");
+            }
+            else
+            {
+                Console.WriteLine("The index is out of range");
+            }
+        }
+
+        public static string SubString(string str, int idx = 0, int length = 0)
+        {
+            //other method:
+            //string result = "";
+            //return result = length == 0 ? str.Substring(idx) : str.Substring(idx, length)
+
+            if (idx < 0 || idx > str.Length - 1 || length < 0 || ((idx + length) > str.Length - 1))
+                return "";
+
+            string result = "";
+            if (length == 0)
+            {
+                while (idx < str.Length)
+                {
+                    result += str[idx++];
+                }
+            }
+            else
+            {
+                while (length > 0)
+                {
+                    result += str[idx++];
+                    length--;
+                }
+            }
+            Console.WriteLine("result: " + result);
+            return result;
+        }
+
+        public static string EveryOtherWord(string example)
+        {
+            StringBuilder result = new StringBuilder();
+            string[] words = example.Split(' ');
+            for (int i = 0; i < words.Length; i += 2)
+            {
+                result.Append(words[i] + " ");
+            }
+            return result.Remove(result.Length - 1, 1).ToString();
+        }
+
+        public static void Main(string[] args)
         {
             int x = 1;
             if (x == 100)
@@ -30,13 +96,16 @@ namespace swe_fundamentals_part_2
                 case Mood.Happy:
                     Console.WriteLine("You must be happy or sad");
                     break;
+
                 case Mood.Hungry:
                     Console.WriteLine("You're hungry! Go eat something");
                     break;
+
                 case Mood.Sleepy:
                 case Mood.Anxious:
                     Console.WriteLine("Sorry to hear you're sleepy or anxious");
                     break;
+
                 default:
                     Console.WriteLine("Your mood is invalid");
                     break;
@@ -119,7 +188,6 @@ namespace swe_fundamentals_part_2
 
             //Option 2
 
-
             string str2 = "Bunny is the Best!";
             for (int i = 1; i < str2.Length; i++)
             {
@@ -132,16 +200,49 @@ namespace swe_fundamentals_part_2
 
             int[] arr2 = new int[10];
             int m = 0, n = 1;
-            while (m < arr2.Length - 1)
+            while (m < arr2.Length)
             {
                 arr2[m++] = n++;
             }
 
-            foreach (var k in arr2)
+            //Print array in reverse order with a loop
+            int sum = 0;
+            for (int i = arr2.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine(k);
+                sum += arr2[i];
+                Console.Write(arr2[i]);
             }
-        }
-    }
-}
+            Console.WriteLine("\nsum: " + sum);
 
+            //Print array as a string
+            string arrayContents = string.Join(",", arr2);
+            Console.WriteLine(arrayContents);
+
+            int[,] arr3 = new int[5, 4];
+            int b = 0, c = 0;
+            while (b < 5 && c < 4)
+            {
+                int temp = b * c;
+                arr3[b, c++] = temp;
+                if (c == 4)
+                {
+                    c = 0;
+                    b++;
+                }
+            }
+
+            foreach (var u in arr3)
+            {
+                Console.WriteLine(u);
+            }
+
+            PrintMessageString("This is a message");
+            Console.WriteLine(JoinMessages("My name ", "is ", "Michelle."));
+            UpdateArray(new int[] { 1, 2, 3, 4, 5 }, 2, 5);
+            Console.WriteLine(EveryOtherWord("to be or not to be"));
+            Console.WriteLine(SubString("to be or not to be", 5, 3));
+        }
+
+    }
+
+}

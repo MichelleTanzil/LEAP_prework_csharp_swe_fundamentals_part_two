@@ -10,3 +10,4 @@ E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\net
 E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.dll
 E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.pdb
 E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.genruntimeconfig.cache
+E:\Documents\Code\LEAP_training\Pre-work\swe_fundamentals_part_two\obj\Debug\netcoreapp3.1\swe_fundamentals_part_two.csprojAssemblyReference.cache
