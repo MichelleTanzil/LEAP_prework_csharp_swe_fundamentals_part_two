@@ -105,6 +105,14 @@ namespace swe_fundamentals_part_2
             return str[num];
         }
 
+        public static void OutputParameters(int num1, int num2, out int sum, out int difference, out int product, out int quotient)
+        {
+            sum = num1 + num2;
+            difference = Math.Abs(num1 - num2);
+            product = num1 * num2;
+            quotient = num1 / num2;
+        }
+
         public static void Main(string[] args)
         {
             int x = 1;
@@ -271,6 +279,12 @@ namespace swe_fundamentals_part_2
             Console.WriteLine(AreArraysEqual(new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 2, 3, 4, 5 }));
             int num = 6;
             Console.WriteLine(ReferenceParameters("Bunny is the most adorable bunny!", ref num));
+            int added, difference, product, quotient;
+            OutputParameters(4, 2, out added, out difference, out product, out quotient);
+            Console.WriteLine("added: {0}", added);
+            Console.WriteLine("difference: {0}", difference);
+            Console.WriteLine("product: {0}", product);
+            Console.WriteLine("quotient: {0}", quotient);
         }
 
     }
