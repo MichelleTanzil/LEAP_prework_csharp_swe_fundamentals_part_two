@@ -63,7 +63,6 @@ namespace swe_fundamentals_part_2
                     length--;
                 }
             }
-            Console.WriteLine("result: " + result);
             return result;
         }
 
@@ -76,6 +75,19 @@ namespace swe_fundamentals_part_2
                 result.Append(words[i] + " ");
             }
             return result.Remove(result.Length - 1, 1).ToString();
+        }
+
+        public static bool AreArraysEqual(int[] arr1, int[] arr2)
+        {
+            if (arr1.Length != arr2.Length)
+                return false;
+            int runner = 0;
+            while (runner < arr1.Length && runner < arr2.Length)
+            {
+                if (arr1[runner] != arr2[runner++])
+                    return false;
+            }
+            return true;
         }
 
         public static void Main(string[] args)
@@ -241,6 +253,7 @@ namespace swe_fundamentals_part_2
             UpdateArray(new int[] { 1, 2, 3, 4, 5 }, 2, 5);
             Console.WriteLine(EveryOtherWord("to be or not to be"));
             Console.WriteLine(SubString("to be or not to be", 5, 3));
+            Console.WriteLine(AreArraysEqual(new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 2, 3, 4, 5 }));
         }
 
     }
