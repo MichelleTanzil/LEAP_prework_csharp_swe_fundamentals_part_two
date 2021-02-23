@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace swe_fundamentals_part_2
@@ -14,6 +15,33 @@ namespace swe_fundamentals_part_2
 
     class Program
     {
+        public static List<List<int>> GetPermutations(List<int> array)
+        {
+            List < List<int> > permutations = new List<List<int>>();
+            GetPermutations(0, array, permutations);
+            return permutations;
+        }
+        public static void GetPermutations(int idx, List<int> array, List<List<int>> permutations)
+        {
+            if (idx == array.Count - 1)
+                permutations.Add(new List<int>(array));
+            else
+            {
+                for (int j = idx; j < array.Count; j++)
+                {
+                    Swap(array, idx, j);
+                    GetPermutations(idx + 1, array, permutations);
+                    Swap(array, idx, j);
+                }
+            }
+        }
+
+        public static void Swap(List<int> array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
         public static void PrintMessageString(string msg)
         {
             if (string.IsNullOrEmpty(msg))
@@ -285,6 +313,7 @@ namespace swe_fundamentals_part_2
             Console.WriteLine("difference: {0}", difference);
             Console.WriteLine("product: {0}", product);
             Console.WriteLine("quotient: {0}", quotient);
+            GetPermutations(new List<int> { 1, 2, 3, 4, 5 });
         }
 
     }
