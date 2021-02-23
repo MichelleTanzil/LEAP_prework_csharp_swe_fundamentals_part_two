@@ -90,6 +90,21 @@ namespace swe_fundamentals_part_2
             return true;
         }
 
+        public static char ReferenceParameters(string str, ref int num)
+        {
+            if (num < 0)
+            {
+                num = 0;
+                return str[0];
+            }
+            if (num > str.Length - 1)
+            {
+                num = str.Length - 1;
+                return str[str.Length - 1];
+            }
+            return str[num];
+        }
+
         public static void Main(string[] args)
         {
             int x = 1;
@@ -254,6 +269,8 @@ namespace swe_fundamentals_part_2
             Console.WriteLine(EveryOtherWord("to be or not to be"));
             Console.WriteLine(SubString("to be or not to be", 5, 3));
             Console.WriteLine(AreArraysEqual(new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 2, 3, 4, 5 }));
+            int num = 6;
+            Console.WriteLine(ReferenceParameters("Bunny is the most adorable bunny!", ref num));
         }
 
     }
